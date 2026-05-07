@@ -264,6 +264,8 @@ proxy-groups:
     type: url-test
     url: https://captive.apple.com/generate_204
     hidden: true
+    strategy: sticky-sessions
+    sample-rate: 1
     interval: 300
     include-all: true
     proxies:
