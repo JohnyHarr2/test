@@ -194,6 +194,7 @@ proxy-groups:
     icon: https://cdn.jsdelivr.net/gh/remnawave/templates@main/icons/Blocked.png
     type: select
     proxies:
+      - ⚡️ По пингу
       - 🎲 Любой доступный сервер
     use:
       - subscription
@@ -210,6 +211,7 @@ proxy-groups:
     icon: https://cdn.jsdelivr.net/gh/remnawave/templates@main/icons/Discord.png
     type: select
     proxies:
+      - ⚡️ По пингу
       - 🚫 Недоступные сайты
     use:
       - subscription
@@ -243,6 +245,16 @@ proxy-groups:
     hidden: true
     proxies:
       - 🚫 Недоступные сайты
+  
+  - name: ⚡️ По пингу
+    icon: https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Auto.png
+    type: url-test
+    url: https://captive.apple.com/generate_204
+    hidden: true
+    interval: 300
+    include-all: true
+    proxies:
+      # LEAVE THIS LINE!
 
   - name: 🎲 Любой доступный сервер
     type: smart
@@ -571,15 +583,15 @@ rules:
   - RULE-SET,quic,REJECT
 
   # Определялки IP пускаем в прокси, чтобы пользователь видел
-  - DOMAIN,ipwho.is,🚫 Недоступные сайты
-  - DOMAIN,api.myip.com,🚫 Недоступные сайты
-  - DOMAIN,ipapi.co,🚫 Недоступные сайты
-  - DOMAIN,ident.me,🚫 Недоступные сайты
-  - DOMAIN,ip-api.com,🚫 Недоступные сайты
-  - DOMAIN,ipinfo.io,🚫 Недоступные сайты
-  - DOMAIN,api.ip.sb,🚫 Недоступные сайты
-  - DOMAIN,2ip.io,🚫 Недоступные сайты
-  - DOMAIN,2ipcore.com,🚫 Недоступные сайты
+  - DOMAIN,ipwho.is,🌍 Остальные сайты
+  - DOMAIN,api.myip.com,🌍 Остальные сайты
+  - DOMAIN,ipapi.co,🌍 Остальные сайты
+  - DOMAIN,ident.me,🌍 Остальные сайты
+  - DOMAIN,ip-api.com,🌍 Остальные сайты
+  - DOMAIN,ipinfo.io,🌍 Остальные сайты
+  - DOMAIN,api.ip.sb,🌍 Остальные сайты
+  - DOMAIN,2ip.io,🌍 Остальные сайты
+  - DOMAIN,2ipcore.com,🌍 Остальные сайты
 
   # -----
 
@@ -594,10 +606,10 @@ rules:
   - PROCESS-NAME-REGEX,(?i).*telegram.*,➤ Telegram
 
   # 💬 Discord
-  - AND,((RULE-SET,cloudflare-ips),(NETWORK,udp),(DST-PORT,19200-19500)),💬 Discord
-  - AND,((RULE-SET,cloudflare-ips),(NETWORK,udp),(DST-PORT,50000-50100)),💬 Discord
-  - AND,((RULE-SET,discord_voiceips),(NETWORK,udp),(DST-PORT,50000-50100)),💬 Discord
-  - RULE-SET,discord_vc,💬 Discord
+ # - AND,((RULE-SET,cloudflare-ips),(NETWORK,udp),(DST-PORT,19200-19500)),💬 Discord
+ # - AND,((RULE-SET,cloudflare-ips),(NETWORK,udp),(DST-PORT,50000-50100)),💬 Discord
+ # - AND,((RULE-SET,discord_voiceips),(NETWORK,udp),(DST-PORT,50000-50100)),💬 Discord
+  #- RULE-SET,discord_vc,💬 Discord
   - RULE-SET,discord_domains,💬 Discord
   - PROCESS-NAME-REGEX,(?i).*discord.*,💬 Discord
   - PROCESS-NAME-REGEX,(?i).*vesktop.*,💬 Discord
