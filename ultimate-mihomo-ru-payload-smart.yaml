@@ -598,7 +598,10 @@ rules:
   - RULE-SET,discord_domains,💬 Discord
   - PROCESS-NAME-REGEX,(?i).*discord.*,💬 Discord
   - PROCESS-NAME-REGEX,(?i).*vesktop.*,💬 Discord
-
+  
+  # SignalRGB
+  - PROCESS-NAME-REGEX,/(?i).*signalrgb.*/gm,🚫 Недоступные сайты
+  - DOMAIN-KEYWORD,signalrgb.com,🚫 Недоступные сайты
 
   # 🚫 Недоступные сайты
   - RULE-SET,ru-inside,🚫 Недоступные сайты # ITDog списки доменов недоступные из РФ
