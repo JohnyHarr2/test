@@ -206,8 +206,8 @@ proxy-groups:
     icon: https://cdn.jsdelivr.net/gh/remnawave/templates@main/icons/Blocked.png
     type: select
     proxies:
-      - ⚡️ По пингу
       - 🎲 Любой доступный сервер
+      - ⚡️ По пингу
     use:
       - subscription
 
@@ -223,8 +223,8 @@ proxy-groups:
     icon: https://cdn.jsdelivr.net/gh/remnawave/templates@main/icons/Discord.png
     type: select
     proxies:
-      - ⚡️ По пингу
       - 🚫 Недоступные сайты
+      - ⚡️ По пингу
     use:
       - subscription
 
@@ -257,6 +257,7 @@ proxy-groups:
     hidden: true
     proxies:
       - 🚫 Недоступные сайты
+      - ⚡️ По пингу
 
   - name: ⚡️ По пингу
     icon: https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Auto.png
@@ -457,19 +458,6 @@ rule-providers:
     path: ./rule-sets/discord_voiceips.mrs
     interval: 86400
     proxy: 🚫 Недоступные сайты
-  discord_vc:
-    type: inline
-    payload:
-      - AND,((IP-CIDR,138.128.136.0/21),(NETWORK,udp),(DST-PORT,50000-50100))
-      - AND,((IP-CIDR,162.158.0.0/15),(NETWORK,udp),(DST-PORT,50000-50100))
-      - AND,((IP-CIDR,172.64.0.0/13),(NETWORK,udp),(DST-PORT,50000-50100))
-      - AND,((IP-CIDR,34.0.0.0/15),(NETWORK,udp),(DST-PORT,50000-50100))
-      - AND,((IP-CIDR,34.2.0.0/15),(NETWORK,udp),(DST-PORT,50000-50100))
-      - AND,((IP-CIDR,35.192.0.0/12),(NETWORK,udp),(DST-PORT,50000-50100))
-      - AND,((IP-CIDR,35.208.0.0/12),(NETWORK,udp),(DST-PORT,50000-50100))
-      - AND,((IP-CIDR,5.200.14.128/25),(NETWORK,udp),(DST-PORT,50000-50100))
-      - AND,((IP-CIDR,66.22.192.0/18),(NETWORK,udp),(DST-PORT,50000-50100))
-    behavior: classical
   refilter_domains:
     type: http
     behavior: domain
@@ -618,10 +606,6 @@ rules:
   - PROCESS-NAME-REGEX,(?i).*telegram.*,➤ Telegram
 
   # 💬 Discord
-  #- AND,((RULE-SET,cloudflare-ips),(NETWORK,udp),(DST-PORT,19200-19500)),💬 Discord
-  #- AND,((RULE-SET,cloudflare-ips),(NETWORK,udp),(DST-PORT,50000-50100)),💬 Discord
-  #- AND,((RULE-SET,discord_voiceips),(NETWORK,udp),(DST-PORT,50000-50100)),💬 Discord
-  #- RULE-SET,discord_vc,💬 Discord
   - RULE-SET,discord_domains,💬 Discord
   - PROCESS-NAME-REGEX,(?i).*discord.*,💬 Discord
   - PROCESS-NAME-REGEX,(?i).*vesktop.*,💬 Discord
