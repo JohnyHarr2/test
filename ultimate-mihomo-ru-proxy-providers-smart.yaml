@@ -230,7 +230,6 @@ proxy-groups:
   - name: 🟠 Cloudflare
     icon: https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Cloudflare.png
     type: select
-    include-all: true
     proxies:
       - 🇷🇺 Без VPN
       - 🚫 Недоступные сайты
