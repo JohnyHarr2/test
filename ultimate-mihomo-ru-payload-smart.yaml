@@ -221,8 +221,8 @@ proxy-groups:
     icon: https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Cloudflare.png
     type: select
     proxies:
-      - 🚫 Недоступные сайты
       - 🇷🇺 Без VPN
+      - 🚫 Недоступные сайты
 
 
   - name: ➤ Telegram
