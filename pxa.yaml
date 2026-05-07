@@ -215,7 +215,6 @@ proxy-groups:
     type: select
     proxies:
       - 🚫 Недоступные сайты
-      - ⚡️ По пингу
     use:
       - subscription
 
@@ -224,6 +223,7 @@ proxy-groups:
     type: select
     proxies:
       - 🚫 Недоступные сайты
+      - ⚡️ По пингу
     use:
       - subscription
 
