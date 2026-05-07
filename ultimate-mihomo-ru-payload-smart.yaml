@@ -215,6 +215,16 @@ proxy-groups:
       - ⚡️ По пингу
     use:
       - subscription
+      
+      
+  - name: 🟠 Cloudflare
+    icon: https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Cloudflare.png
+    type: select
+    include-all: true
+    proxies:
+      - 🚫 Недоступные сайты
+      - 🇷🇺 Без VPN
+
 
   - name: ➤ Telegram
     icon: https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Telegram.png
@@ -535,7 +545,15 @@ rule-providers:
     url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/cloudflare.mrs
     path: ./rule-sets/cloudflare-ips.mrs
     interval: 86400
-    proxy: 🚫 Недоступные сайты
+    proxy: 🟠 Cloudflare
+  cloudflare-domains:
+    type: http
+    behavior: domain
+    format: mrs
+    url: https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/cloudflare.mrs
+    path: ./rule-sets/cloudflare-domains.mrs
+    interval: 86400
+    proxy: 🟠 Cloudflare
   quic:
     type: inline
     behavior: classical
@@ -613,6 +631,9 @@ rules:
   - RULE-SET,ai,🚫 Недоступные сайты # Нейросети
   - RULE-SET,google-deepmind,🚫 Недоступные сайты # Google Gemini и AI Studio
   - RULE-SET,speedtest-net,🚫 Недоступные сайты # speedtest.net
+  
+  - RULE-SET,cloudflare-ips,🟠 Cloudflare # Список ip MetaCubeX
+  - RULE-SET,cloudflare-domains,🟠 Cloudflare # Домены сервисов Cloudflare
 
   # ⚪🔵🔴 RU сайты
   - RULE-SET,ru-inline,⚪🔵🔴 RU сайты # Списки набитые вручную (смотрите выше в rule-providers)
