@@ -139,8 +139,8 @@ dns:
     - https://8.8.8.8/dns-query#DIRECT # Google DNS
   nameserver:
     # Сервер по умолчанию, DNS запросы будут идти через то, что выбрано в "Остальные сайты"
-    - https://8.8.8.8/dns-query#🌍 Остальные сайты
-    - https://94.140.14.14/dns-query#🌍 Остальные сайты
+    - https://8.8.8.8/dns-query#🌍 Остальное
+    - https://94.140.14.14/dns-query#🌍 Остальное
   nameserver-policy:
     # Блокировка рекламы (опционально)
     rule-set:oisd_big:
@@ -249,7 +249,7 @@ proxy-groups:
     proxies:
       - 🇷🇺 Без VPN
 
-  - name: 🌍 Остальные сайты
+  - name: 🌍 Остальное
     icon: https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Global.png
     type: select
     proxies:
@@ -599,15 +599,15 @@ rules:
   - RULE-SET,quic,REJECT
 
   # Определялки IP пускаем в прокси, чтобы пользователь видел
-  - DOMAIN,ipwho.is,🌍 Остальные сайты
-  - DOMAIN,api.myip.com,🌍 Остальные сайты
-  - DOMAIN,ipapi.co,🌍 Остальные сайты
-  - DOMAIN,ident.me,🌍 Остальные сайты
-  - DOMAIN,ip-api.com,🌍 Остальные сайты
-  - DOMAIN,ipinfo.io,🌍 Остальные сайты
-  - DOMAIN,api.ip.sb,🌍 Остальные сайты
-  - DOMAIN,2ip.io,🌍 Остальные сайты
-  - DOMAIN,2ipcore.com,🌍 Остальные сайты
+  - DOMAIN,ipwho.is,🌍 Остальное
+  - DOMAIN,api.myip.com,🌍 Остальное
+  - DOMAIN,ipapi.co,🌍 Остальное
+  - DOMAIN,ident.me,🌍 Остальное
+  - DOMAIN,ip-api.com,🌍 Остальное
+  - DOMAIN,ipinfo.io,🌍 Остальное
+  - DOMAIN,api.ip.sb,🌍 Остальное
+  - DOMAIN,2ip.io,🌍 Остальное
+  - DOMAIN,2ipcore.com,🌍 Остальное
 
   # -----
 
@@ -664,5 +664,5 @@ rules:
   - RULE-SET,geoip-for-ru,⚪🔵🔴 RU сайты
 
 
-  # 🌍 Остальные сайты
-  - MATCH,🌍 Остальные сайты
+  # 🌍 Остальное
+  - MATCH,🌍 Остальное
