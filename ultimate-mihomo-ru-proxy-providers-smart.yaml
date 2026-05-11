@@ -1,4 +1,3 @@
-
 # Ультимативный конфиг с кучей селекторов (Недоступные сайты, YouTube, Discord, Telegram)
 # Конфиг в первую очередь предназначен для использования внутри России.
 # Может быть немного перегружен, а также содержать ошибки.
@@ -270,7 +269,7 @@ proxy-groups:
     icon: https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Auto.png
     type: url-test
     url: https://captive.apple.com/generate_204
-    hidden: false
+    hidden: true
     strategy: sticky-sessions
     sample-rate: 1
     interval: 300
@@ -611,9 +610,6 @@ rules:
   - DOMAIN,2ipcore.com,🌍 Остальное
 
   # -----
-
-  - DOMAIN,accounts.grpc.ea.com,🚫 Недоступные сайты 
-  # Обход крымской блокировки на логин в EA
 
   # ▶️ YouTube
   - RULE-SET,youtube,▶️ YouTube
