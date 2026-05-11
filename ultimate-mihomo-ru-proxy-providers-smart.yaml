@@ -273,7 +273,6 @@ proxy-groups:
     hidden: false
     strategy: sticky-sessions
     sample-rate: 1
-    tolerance: 20
     interval: 300
     include-all: true
     proxies:
