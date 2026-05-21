@@ -274,9 +274,8 @@ proxy-groups:
     sample-rate: 1
     tolerance: 20
     interval: 300
-    include-all: true
-    proxies:
-      # LEAVE THIS LINE!
+    use:
+      - subscription
 
   - name: 🎲 Любой доступный сервер
     type: smart
