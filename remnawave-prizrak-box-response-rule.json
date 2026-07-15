@@ -1,0 +1,35 @@
+{
+  "name": "Prizrak-Box",
+  "description": "Prizrak-Box: Android (pxa/payload) + Desktop (pxd/proxy-providers)",
+  "enabled": true,
+  "operator": "AND",
+  "conditions": [
+    {
+      "headerName": "user-agent",
+      "operator": "CONTAINS",
+      "value": "Clash-Meta/Prizrak-Box (",
+      "caseSensitive": false
+    }
+  ],
+  "responseType": "XRAY_BASE64",
+  "responseModifications": {
+    "headers": [
+      {
+        "key": "pxa-template",
+        "value": "https://raw.githubusercontent.com/JohnyHarr2/test/main/ultimate-mihomo-ru-payload-smart.yaml"
+      },
+      {
+        "key": "pxa-template-scheme",
+        "value": "payload"
+      },
+      {
+        "key": "pxd-template",
+        "value": "https://raw.githubusercontent.com/JohnyHarr2/test/main/ultimate-mihomo-ru-proxy-providers-smart.yaml"
+      },
+      {
+        "key": "pxd-template-scheme",
+        "value": "proxy-providers"
+      }
+    ]
+  }
+}

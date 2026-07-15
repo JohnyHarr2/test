@@ -594,6 +594,8 @@ rules:
   - RULE-SET,torrent-clients,DIRECT
   - RULE-SET,torrent-trackers,DIRECT
   - PROCESS-NAME-REGEX,(?i).*torrent.*,DIRECT
+  # Торрент- и download-клиенты без "torrent" в имени процесса (эталонный список)
+  - PROCESS-NAME-REGEX,(?i)^(deluge-gui|deluged|deluge|transmission-qt|transmission|utweb|bitcomet|bitspirit|bitlet|bitlord|biglybt|tixati|azureus|vuze|halite|tribler|frostwire|limewire|shareaza|motrix|free-download-manager|fdm|ariang|aria2c|eiskaltdcpp|dcplusplus|thunder|downloadsdkserver|eagleget|xdm|liii|flashget|persepolis|cpod|zona|mediaget|popcorntime|butter-project|jdownloader2|mlnet|synapse)(\.exe)?$,DIRECT
 
   # Делаем REJECT QUIC (для VLESS REALITY)
   - RULE-SET,quic,REJECT
