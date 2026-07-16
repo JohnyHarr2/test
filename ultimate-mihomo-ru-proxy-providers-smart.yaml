@@ -590,12 +590,12 @@ rules:
 
   # Пускаем эти домены твича в директ, чтобы избавиться от рекламы (опционально)
   - OR,((DOMAIN-SUFFIX,ads.twitch.tv),(DOMAIN-SUFFIX,playlist.ttvnw.net)),DIRECT
-  # Отправляем торренты в DIRECT (опционально)
-  - RULE-SET,torrent-clients,DIRECT
+  # ТЕСТ: торрент-клиенты в блок (REJECT). Для боевого режима вернуть на DIRECT.
+  - RULE-SET,torrent-clients,REJECT
   - RULE-SET,torrent-trackers,DIRECT
-  - PROCESS-NAME-REGEX,(?i).*torrent.*,DIRECT
+  - PROCESS-NAME-REGEX,(?i).*torrent.*,REJECT
   # Торрент- и download-клиенты без "torrent" в имени процесса (эталонный список)
-  - PROCESS-NAME-REGEX,(?i)^(deluge-gui|deluged|deluge|transmission-qt|transmission|utweb|bitcomet|bitspirit|bitlet|bitlord|biglybt|tixati|azureus|vuze|halite|tribler|frostwire|limewire|shareaza|motrix|free-download-manager|fdm|ariang|aria2c|eiskaltdcpp|dcplusplus|thunder|downloadsdkserver|eagleget|xdm|liii|flashget|persepolis|cpod|zona|mediaget|popcorntime|butter-project|jdownloader2|mlnet|synapse)(\.exe)?$,DIRECT
+  - PROCESS-NAME-REGEX,(?i)^(deluge-gui|deluged|deluge|transmission-qt|transmission|utweb|bitcomet|bitspirit|bitlet|bitlord|biglybt|tixati|azureus|vuze|halite|tribler|frostwire|limewire|shareaza|motrix|free-download-manager|fdm|ariang|aria2c|eiskaltdcpp|dcplusplus|thunder|downloadsdkserver|eagleget|xdm|liii|flashget|persepolis|cpod|zona|mediaget|popcorntime|butter-project|jdownloader2|mlnet|synapse)(\.exe)?$,REJECT
 
   # Делаем REJECT QUIC (для VLESS REALITY)
   - RULE-SET,quic,REJECT
