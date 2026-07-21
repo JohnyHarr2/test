@@ -68,6 +68,26 @@
     "remarks": "Торрент напрямую"
   },
   {
+    "network": "tcp,udp",
+    "outboundTag": "direct",
+    "domain": [
+      "geosite:faceit"
+    ],
+    "enabled": true,
+    "remarks": "Faceit(Geosite)"
+  },
+  {
+    "network": "tcp,udp",
+    "outboundTag": "direct",
+    "process": [
+      "faceitclient.exe",
+      "faceitservice",
+      "cs2.exe"
+    ],
+    "enabled": true,
+    "remarks": "Faceit/CS(Приложения)"
+  },
+  {
     "port": "",
     "network": "tcp,udp",
     "outboundTag": "proxy",
@@ -188,26 +208,6 @@
     ],
     "enabled": true,
     "remarks": "Заблокированные домены в прокси"
-  },
-  {
-    "network": "tcp,udp",
-    "outboundTag": "direct",
-    "domain": [
-      "geosite:faceit"
-    ],
-    "enabled": true,
-    "remarks": "Faceit(Geosite)"
-  },
-  {
-    "network": "tcp,udp",
-    "outboundTag": "direct",
-    "process": [
-      "faceitclient.exe",
-      "faceitservice",
-      "cs2.exe"
-    ],
-    "enabled": true,
-    "remarks": "Faceit/CS(Приложения)"
   },
   {
     "port": "0-65535",

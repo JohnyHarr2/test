@@ -1,32 +1,5 @@
 [
   {
-    "port": "443",
-    "outboundTag": "direct",
-    "enabled": false,
-    "remarks": "test",
-    "ruleType": 0
-  },
-  {
-    "port": "",
-    "outboundTag": "proxy",
-    "ip": [
-      "185.207.214.237"
-    ],
-    "enabled": true,
-    "remarks": "dusk",
-    "ruleType": 1
-  },
-  {
-    "port": "",
-    "network": "tcp,udp",
-    "outboundTag": "direct",
-    "protocol": [
-      "bittorrent"
-    ],
-    "enabled": true,
-    "remarks": "Торрент напрямую"
-  },
-  {
     "network": "tcp,udp",
     "outboundTag": "direct",
     "process": [
@@ -84,6 +57,23 @@
     ],
     "enabled": true,
     "remarks": "Торрент(Приложения)"
+  },
+  {
+    "port": "",
+    "network": "tcp,udp",
+    "outboundTag": "direct",
+    "protocol": [
+      "bittorrent"
+    ],
+    "enabled": true,
+    "remarks": "Торрент напрямую"
+  },
+  {
+    "port": "443",
+    "outboundTag": "direct",
+    "enabled": false,
+    "remarks": "test",
+    "ruleType": 0
   },
   {
     "port": "",
