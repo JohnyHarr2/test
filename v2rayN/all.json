@@ -1,0 +1,100 @@
+[
+  {
+    "outboundTag": "block",
+    "domain": [
+      "geosite:category-ads-all"
+    ],
+    "enabled": true,
+    "remarks": "Блокировка рекламы"
+  },
+  {
+    "outboundTag": "direct",
+    "ip": [
+      "geoip:private"
+    ],
+    "enabled": true,
+    "remarks": "Приватные сети напрямую"
+  },
+  {
+    "outboundTag": "direct",
+    "domain": [
+      "geosite:private"
+    ],
+    "enabled": true,
+    "remarks": "Приватные домены напрямую"
+  },
+  {
+    "network": "tcp,udp",
+    "outboundTag": "direct",
+    "protocol": [
+      "bittorrent"
+    ],
+    "enabled": true,
+    "remarks": "Торрент напрямую"
+  },
+  {
+    "network": "tcp,udp",
+    "outboundTag": "block",
+    "process": [
+      "qbittorrent.exe",
+      "utorrent.exe",
+      "bittorrent.exe",
+      "utweb.exe",
+      "utorrentie.exe",
+      "bittorrentie.exe",
+      "bitcomet.exe",
+      "tixati.exe",
+      "deluge.exe",
+      "deluge-gui.exe",
+      "deluged.exe",
+      "transmission-qt.exe",
+      "transmission.exe",
+      "azureus.exe",
+      "vuze.exe",
+      "biglybt.exe",
+      "picotorrent.exe",
+      "halite.exe",
+      "tribler.exe",
+      "frostwire.exe",
+      "webtorrent.exe",
+      "bitlord.exe",
+      "limewire.exe",
+      "shareaza.exe",
+      "motrix.exe",
+      "fdm.exe",
+      "ariang.exe",
+      "ktorrent.exe",
+      "eiskaltdcpp.exe",
+      "dcplusplus.exe",
+      "thunder.exe",
+      "downloadsdkserver.exe",
+      "eagleget.exe",
+      "xdm.exe",
+      "rtorrent.exe",
+      "liii.exe",
+      "bitspirit.exe",
+      "bitlet.exe",
+      "flashget.exe",
+      "persepolis.exe",
+      "torrentex.exe",
+      "cpod.exe",
+      "zona.exe",
+      "mediaget.exe",
+      "popcorntime.exe",
+      "butter-project.exe",
+      "free-download-manager.exe",
+      "jdownloader2.exe",
+      "mlnet.exe",
+      "synapse.exe",
+      "aria2c.exe"
+    ],
+    "enabled": true,
+    "remarks": "Торрент(Приложения)"
+  },
+  {
+    "port": "0-65535",
+    "outboundTag": "proxy",
+    "enabled": true,
+    "remarks": "Остальное в прокси"
+  }
+]

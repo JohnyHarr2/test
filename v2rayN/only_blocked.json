@@ -1,0 +1,218 @@
+[
+  {
+    "network": "tcp,udp",
+    "outboundTag": "direct",
+    "process": [
+      "qbittorrent.exe",
+      "utorrent.exe",
+      "bittorrent.exe",
+      "utweb.exe",
+      "utorrentie.exe",
+      "bittorrentie.exe",
+      "bitcomet.exe",
+      "tixati.exe",
+      "deluge.exe",
+      "deluge-gui.exe",
+      "deluged.exe",
+      "transmission-qt.exe",
+      "transmission.exe",
+      "azureus.exe",
+      "vuze.exe",
+      "biglybt.exe",
+      "picotorrent.exe",
+      "halite.exe",
+      "tribler.exe",
+      "frostwire.exe",
+      "webtorrent.exe",
+      "bitlord.exe",
+      "limewire.exe",
+      "shareaza.exe",
+      "motrix.exe",
+      "fdm.exe",
+      "ariang.exe",
+      "ktorrent.exe",
+      "eiskaltdcpp.exe",
+      "dcplusplus.exe",
+      "thunder.exe",
+      "downloadsdkserver.exe",
+      "eagleget.exe",
+      "xdm.exe",
+      "rtorrent.exe",
+      "liii.exe",
+      "bitspirit.exe",
+      "bitlet.exe",
+      "flashget.exe",
+      "persepolis.exe",
+      "torrentex.exe",
+      "cpod.exe",
+      "zona.exe",
+      "mediaget.exe",
+      "popcorntime.exe",
+      "butter-project.exe",
+      "free-download-manager.exe",
+      "jdownloader2.exe",
+      "mlnet.exe",
+      "synapse.exe",
+      "aria2c.exe"
+    ],
+    "enabled": true,
+    "remarks": "Торрент(Приложения)"
+  },
+  {
+    "network": "tcp,udp",
+    "outboundTag": "direct",
+    "protocol": [
+      "bittorrent"
+    ],
+    "enabled": true,
+    "remarks": "Торрент напрямую"
+  },
+  {
+    "port": "",
+    "network": "tcp,udp",
+    "outboundTag": "proxy",
+    "domain": [
+      "cdn-telegram.org",
+      "comments.app",
+      "contest.com",
+      "fragment.com",
+      "graph.org",
+      "quiz.directory",
+      "t.me",
+      "tdesktop.com",
+      "telega.one",
+      "telegra.ph",
+      "telegram-cdn.org",
+      "telegram.dog",
+      "telegram.me",
+      "telegram.org",
+      "telegram.space",
+      "telesco.pe",
+      "tg.dev",
+      "ton.org",
+      "tx.me",
+      "usercontent.dev"
+    ],
+    "process": [
+      "Telegram.exe"
+    ],
+    "enabled": true,
+    "remarks": "telegram"
+  },
+  {
+    "port": "",
+    "network": "",
+    "outboundTag": "proxy",
+    "process": [
+      "Discord.exe"
+    ],
+    "enabled": true,
+    "remarks": "Дискорд (войс) в прокси"
+  },
+  {
+    "port": "",
+    "network": "tcp,udp",
+    "outboundTag": "proxy",
+    "domain": [
+      "accounts.grpc.ea.com"
+    ],
+    "protocol": [
+      "http",
+      "tls"
+    ],
+    "enabled": true,
+    "remarks": "BF6",
+    "ruleType": 1
+  },
+  {
+    "port": "",
+    "network": "tcp,udp",
+    "outboundTag": "proxy",
+    "protocol": [],
+    "process": [
+      "SignalRgb.exe",
+      "SignalRgbLauncher.exe",
+      "Update.exe"
+    ],
+    "enabled": true,
+    "remarks": "SignalRGB",
+    "ruleType": 1
+  },
+  {
+    "outboundTag": "block",
+    "domain": [
+      "geosite:category-ads-all"
+    ],
+    "enabled": true,
+    "remarks": "Блокировка рекламы"
+  },
+  {
+    "outboundTag": "direct",
+    "ip": [
+      "geoip:private"
+    ],
+    "enabled": true,
+    "remarks": "Приватные сети напрямую"
+  },
+  {
+    "outboundTag": "direct",
+    "domain": [
+      "geosite:private"
+    ],
+    "enabled": true,
+    "remarks": "Приватные домены напрямую"
+  },
+  {
+    "outboundTag": "proxy",
+    "ip": [
+      "1.0.0.1",
+      "1.1.1.1",
+      "8.8.8.8",
+      "8.8.4.4"
+    ],
+    "enabled": true,
+    "remarks": "DNS в прокси"
+  },
+  {
+    "outboundTag": "proxy",
+    "ip": [
+      "geoip:ru-blocked"
+    ],
+    "enabled": true,
+    "remarks": "Заблокированные сети в прокси"
+  },
+  {
+    "outboundTag": "proxy",
+    "domain": [
+      "geosite:ru-blocked"
+    ],
+    "enabled": true,
+    "remarks": "Заблокированные домены в прокси"
+  },
+  {
+    "network": "tcp,udp",
+    "outboundTag": "direct",
+    "domain": [
+      "geosite:faceit"
+    ],
+    "enabled": true,
+    "remarks": "Faceit(Geosite)"
+  },
+  {
+    "network": "tcp,udp",
+    "outboundTag": "direct",
+    "process": [
+      "faceitclient.exe",
+      "faceitservice",
+      "cs2.exe"
+    ],
+    "enabled": true,
+    "remarks": "Faceit/CS(Приложения)"
+  },
+  {
+    "port": "0-65535",
+    "outboundTag": "direct",
+    "enabled": true,
+    "remarks": "Остальное напрямую"
+  }
+]

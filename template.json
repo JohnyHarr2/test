@@ -1,0 +1,18 @@
+{
+  "routingItems": [
+    {
+      "remarks": "Всё",
+      "url": "https://raw.githubusercontent.com/JohnyHarr2/test/refs/heads/main/v2rayN/all.json"
+    },
+    {
+      "remarks": "Всё, кроме РФ",
+      "domainStrategy": "IPOnDemand",
+      "url": "https://raw.githubusercontent.com/JohnyHarr2/test/refs/heads/main/v2rayN/all_except_ru.json"
+    },
+    {
+      "remarks": "Заблокированное",
+      "domainStrategy": "IPOnDemand",
+      "url": "https://raw.githubusercontent.com/JohnyHarr2/test/refs/heads/main/v2rayN/only_blocked.json"
+    }
+  ]
+}
