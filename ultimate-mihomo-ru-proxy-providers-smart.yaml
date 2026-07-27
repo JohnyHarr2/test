@@ -580,6 +580,22 @@ rules:
   - PROCESS-NAME-REGEX,(?i).*tailscale.*,DIRECT
   - PROCESS-NAME-REGEX,(?i).*wireguard.*,DIRECT
   - PROCESS-NAME-REGEX,(?i).*netbird.*,DIRECT
+  # Radmin, Hamachi, ZeroTier, NordLynx, Windscribe, ProtonVPN (orphan Wintun)
+  - PROCESS-NAME-REGEX,(?i).*radmin.*,DIRECT
+  - PROCESS-NAME-REGEX,(?i).*rvcontrol.*,DIRECT
+  - PROCESS-NAME-REGEX,(?i).*rvrvpn.*,DIRECT
+  - PROCESS-NAME-REGEX,(?i).*rvsvpn.*,DIRECT
+  - PROCESS-NAME-REGEX,(?i).*hamachi.*,DIRECT
+  - PROCESS-NAME-REGEX,(?i).*zerotier.*,DIRECT
+  - PROCESS-NAME-REGEX,(?i).*nordlynx.*,DIRECT
+  - PROCESS-NAME-REGEX,(?i).*nordvpn.*,DIRECT
+  - PROCESS-NAME-REGEX,(?i).*windscribe.*,DIRECT
+  - PROCESS-NAME-REGEX,(?i).*protonvpn.*,DIRECT
+  # Orphan Wintun adapters (not xray_tun / wintunsingbox_tun)
+  - IN-NAME,NordLynx,DIRECT
+  - IN-NAME,WindscribeWireguard,DIRECT
+  - IN-NAME,ProtonVPN,DIRECT
+  - IN-NAME-REGEX,(?i)^(Hamachi|ZeroTier|Radmin|WireGuard Tunnel).*$,DIRECT
   #- PROCESS-NAME-REGEX,(?i).*anydesk.*,DIRECT
   #- PROCESS-NAME-REGEX,(?i).*rustdesk.*,DIRECT
   #- PROCESS-NAME-REGEX,(?i).*teamviewer.*,DIRECT
