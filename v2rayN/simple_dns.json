@@ -1,0 +1,16 @@
+{
+  "UseSystemHosts": false,
+  "AddCommonHosts": true,
+  "FakeIP": false,
+  "GlobalFakeIp": true,
+  "BlockBindingQuery": true,
+  "DirectDNS": "77.88.8.8",
+  "RemoteDNS": "https://dns.google/dns-query,https://dns.quad9.net/dns-query,https://doh.dns.sb/dns-query,https://dns.mullvad.net/dns-query,https://cloudflare-dns.com/dns-query,https://askniders.johnyharr.com/dns-query,https://askmsc2.johnyharr.com/dns-query",
+  "BootstrapDNS": "77.88.8.8",
+  "Strategy4Freedom": "",
+  "Strategy4Proxy": "",
+  "ServeStale": false,
+  "ParallelQuery": false,
+  "Hosts": "",
+  "DirectExpectedIPs": null
+}
