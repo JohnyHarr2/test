@@ -77,68 +77,23 @@
       "Radmin VPN.exe",
       "RvRvpnGui.exe",
       "RvControlSvc.exe",
-      "RvSvpnClient.exe"
-    ],
-    "enabled": true,
-    "highPriority": true,
-    "remarks": "Radmin"
-  },
-  {
-    "network": "tcp,udp",
-    "outboundTag": "direct",
-    "process": [
+      "RvSvpnClient.exe",
       "hamachi-2.exe",
       "Hamachi2Svc.exe",
       "LMIGuardianSvc.exe",
-      "hamachi-2-ui.exe"
-    ],
-    "enabled": true,
-    "highPriority": true,
-    "remarks": "Hamachi"
-  },
-  {
-    "network": "tcp,udp",
-    "outboundTag": "direct",
-    "process": [
+      "hamachi-2-ui.exe",
       "ZeroTier One.exe",
       "zerotier-one_x64.exe",
       "zerotier-one.exe",
-      "ZeroTierOneService.exe"
-    ],
-    "enabled": true,
-    "highPriority": true,
-    "remarks": "ZeroTier"
-  },
-  {
-    "network": "tcp,udp",
-    "outboundTag": "direct",
-    "process": [
+      "ZeroTierOneService.exe",
       "nordlynx.exe",
       "NordVPN.exe",
       "nordvpn-service.exe",
-      "NordUpdateService.exe"
-    ],
-    "enabled": true,
-    "highPriority": true,
-    "remarks": "NordLynx"
-  },
-  {
-    "network": "tcp,udp",
-    "outboundTag": "direct",
-    "process": [
+      "NordUpdateService.exe",
       "Windscribe.exe",
       "WindscribeService.exe",
       "windscribe-cli.exe",
-      "WindscribeLauncher.exe"
-    ],
-    "enabled": true,
-    "highPriority": true,
-    "remarks": "Windscribe"
-  },
-  {
-    "network": "tcp,udp",
-    "outboundTag": "direct",
-    "process": [
+      "WindscribeLauncher.exe",
       "ProtonVPN.exe",
       "ProtonVPNService.exe",
       "ProtonVPNWireguard.exe",
@@ -146,7 +101,7 @@
     ],
     "enabled": true,
     "highPriority": true,
-    "remarks": "ProtonVPN"
+    "remarks": "Radmin и т.п."
   },
   {
     "port": "443",
