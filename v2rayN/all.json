@@ -57,7 +57,7 @@
     ],
     "enabled": true,
     "highPriority": true,
-    "remarks": "Торрент(Приложения)"
+    "remarks": "Торрент · приложения"
   },
   {
     "network": "tcp,udp",
@@ -67,7 +67,7 @@
     ],
     "enabled": true,
     "highPriority": true,
-    "remarks": "Торрент напрямую"
+    "remarks": "Торрент · протокол"
   },
   {
     "outboundTag": "block",
@@ -75,7 +75,7 @@
       "geosite:category-ads-all"
     ],
     "enabled": true,
-    "remarks": "Блокировка рекламы"
+    "remarks": "Реклама"
   },
   {
     "outboundTag": "direct",
@@ -83,7 +83,7 @@
       "geoip:private"
     ],
     "enabled": true,
-    "remarks": "Приватные сети напрямую"
+    "remarks": "Приватные IP"
   },
   {
     "outboundTag": "direct",
@@ -91,12 +91,12 @@
       "geosite:private"
     ],
     "enabled": true,
-    "remarks": "Приватные домены напрямую"
+    "remarks": "Приватные домены"
   },
   {
     "port": "0-65535",
     "outboundTag": "proxy",
     "enabled": true,
-    "remarks": "Остальное в прокси"
+    "remarks": "Остальное"
   }
 ]

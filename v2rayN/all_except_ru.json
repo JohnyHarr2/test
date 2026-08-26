@@ -57,7 +57,7 @@
     ],
     "enabled": true,
     "highPriority": true,
-    "remarks": "Торрент(Приложения)"
+    "remarks": "Торрент · приложения"
   },
   {
     "port": "",
@@ -68,7 +68,7 @@
     ],
     "enabled": true,
     "highPriority": true,
-    "remarks": "Торрент напрямую"
+    "remarks": "Торрент · протокол"
   },
   {
     "network": "tcp,udp",
@@ -101,14 +101,7 @@
     ],
     "enabled": true,
     "highPriority": true,
-    "remarks": "Radmin и т.п."
-  },
-  {
-    "port": "443",
-    "outboundTag": "direct",
-    "enabled": false,
-    "remarks": "test",
-    "ruleType": 0
+    "remarks": "VPN-клиенты"
   },
   {
     "port": "",
@@ -118,7 +111,7 @@
       "geosite:category-ads-all"
     ],
     "enabled": true,
-    "remarks": "Блокировка рекламы"
+    "remarks": "Реклама"
   },
   {
     "port": "",
@@ -128,7 +121,7 @@
       "geoip:private"
     ],
     "enabled": true,
-    "remarks": "Приватные сети напрямую"
+    "remarks": "Приватные IP"
   },
   {
     "port": "",
@@ -138,7 +131,7 @@
       "geosite:private"
     ],
     "enabled": true,
-    "remarks": "Приватные домены напрямую"
+    "remarks": "Приватные домены"
   },
   {
     "port": "",
@@ -148,7 +141,7 @@
       "geoip:ru"
     ],
     "enabled": true,
-    "remarks": "Доступные только в России напрямую",
+    "remarks": "RU · IP",
     "ruleType": 0
   },
   {
@@ -158,7 +151,7 @@
       "geosite:category-ru"
     ],
     "enabled": true,
-    "remarks": "Ру в директ",
+    "remarks": "RU · домены",
     "ruleType": 0
   },
   {
@@ -167,6 +160,6 @@
     "outboundTag": "proxy",
     "protocol": [],
     "enabled": true,
-    "remarks": "Остальное в прокси"
+    "remarks": "Остальное"
   }
 ]

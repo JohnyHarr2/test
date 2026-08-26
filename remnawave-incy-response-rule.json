@@ -1,0 +1,28 @@
+{
+  "name": "INCY (all platforms)",
+  "description": "INCY any OS: XRAY_JSON без Hetzner + geo routing",
+  "enabled": true,
+  "operator": "AND",
+  "conditions": [
+    {
+      "headerName": "user-agent",
+      "operator": "REGEX",
+      "value": "^INCY/",
+      "caseSensitive": false
+    }
+  ],
+  "responseType": "XRAY_JSON",
+  "responseModifications": {
+    "headers": [
+      {
+        "key": "routing",
+        "value": "incy://routing/onadd/eyJOYW1lIjoi0JLRgdGRLCDQutGA0L7QvNC1INCg0KQiLCJHbG9iYWxQcm94eSI6InRydWUiLCJSb3V0ZU9yZGVyIjoiYmxvY2stZGlyZWN0LXByb3h5IiwiUmVtb3RlRE5TVHlwZSI6IkRvSCIsIlJlbW90ZUROU0RvbWFpbiI6Imh0dHBzOi8vZG5zLmdvb2dsZS9kbnMtcXVlcnkiLCJSZW1vdGVETlNJUCI6IjguOC44LjgiLCJEb21lc3RpY0ROU1R5cGUiOiJEb0giLCJEb21lc3RpY0ROU0RvbWFpbiI6Imh0dHBzOi8vY29tbW9uLmRvdC5kbnMueWFuZGV4Lm5ldC9kbnMtcXVlcnkiLCJEb21lc3RpY0ROU0lQIjoiNzcuODguOC44IiwiR2VvaXB1cmwiOiJodHRwczovL2dpdGh1Yi5jb20vaHlkcmFwb25pcXVlL3Jvc2NvbXZwbi1nZW9pcC9yZWxlYXNlcy9sYXRlc3QvZG93bmxvYWQvZ2VvaXAuZGF0IiwiR2Vvc2l0ZXVybCI6Imh0dHBzOi8vZ2l0aHViLmNvbS9oeWRyYXBvbmlxdWUvcm9zY29tdnBuLWdlb3NpdGUvcmVsZWFzZXMvbGF0ZXN0L2Rvd25sb2FkL2dlb3NpdGUuZGF0IiwiTGFzdFVwZGF0ZWQiOiIxNzg3Njg2OTQyIiwiRG5zSG9zdHMiOnsiZG5zLmdvb2dsZSI6IjguOC44LjgiLCJjb21tb24uZG90LmRucy55YW5kZXgubmV0IjoiNzcuODguOC44IiwibGtmbDIubmFsb2cucnUiOiIyMTMuMjQuNjQuMTc1IiwibGtucGQubmFsb2cucnUiOiIyMTMuMjQuNjQuMTgxIn0sIkRpcmVjdFNpdGVzIjpbImdlb3NpdGU6cHJpdmF0ZSIsImdlb3NpdGU6Y2F0ZWdvcnktcnUiLCJnZW9zaXRlOndoaXRlbGlzdCJdLCJEaXJlY3RJcCI6WyJnZW9pcDpwcml2YXRlIiwiZ2VvaXA6ZGlyZWN0Il0sIlByb3h5U2l0ZXMiOltdLCJQcm94eUlwIjpbIjguOC44LjgiXSwiQmxvY2tTaXRlcyI6WyJnZW9zaXRlOmNhdGVnb3J5LWFkcyJdLCJCbG9ja0lwIjpbXSwiRG9tYWluU3RyYXRlZ3kiOiJJUE9uRGVtYW5kIiwiRmFrZUROUyI6ImZhbHNlIiwidXNlQ2h1bmtGaWxlcyI6ZmFsc2V9"
+      }
+    ],
+    "subscriptionTemplate": "Happ",
+    "excludeHostsByTags": [
+      "HETZNER",
+      "V2JOHNY72416"
+    ]
+  }
+}

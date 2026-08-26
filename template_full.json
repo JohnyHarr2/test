@@ -62,7 +62,7 @@
                                                            ],
                                                "enabled":  true,
                                                "highPriority":  true,
-                                               "remarks":  "Торрент(Приложения)"
+                                               "remarks":  "Торрент · приложения"
                                            },
                                            {
                                                "network":  "tcp,udp",
@@ -72,7 +72,7 @@
                                                             ],
                                                "enabled":  true,
                                                "highPriority":  true,
-                                               "remarks":  "Торрент напрямую"
+                                               "remarks":  "Торрент · протокол"
                                            },
                                            {
                                                "outboundTag":  "block",
@@ -80,7 +80,7 @@
                                                               "geosite:category-ads-all"
                                                           ],
                                                "enabled":  true,
-                                               "remarks":  "Блокировка рекламы"
+                                               "remarks":  "Реклама"
                                            },
                                            {
                                                "outboundTag":  "direct",
@@ -88,7 +88,7 @@
                                                           "geoip:private"
                                                       ],
                                                "enabled":  true,
-                                               "remarks":  "Приватные сети напрямую"
+                                               "remarks":  "Приватные IP"
                                            },
                                            {
                                                "outboundTag":  "direct",
@@ -96,13 +96,13 @@
                                                               "geosite:private"
                                                           ],
                                                "enabled":  true,
-                                               "remarks":  "Приватные домены напрямую"
+                                               "remarks":  "Приватные домены"
                                            },
                                            {
                                                "port":  "0-65535",
                                                "outboundTag":  "proxy",
                                                "enabled":  true,
-                                               "remarks":  "Остальное в прокси"
+                                               "remarks":  "Остальное"
                                            }
                                        ]
                          },
@@ -168,7 +168,7 @@
                                                            ],
                                                "enabled":  true,
                                                "highPriority":  true,
-                                               "remarks":  "Торрент(Приложения)"
+                                               "remarks":  "Торрент · приложения"
                                            },
                                            {
                                                "port":  "",
@@ -179,7 +179,7 @@
                                                             ],
                                                "enabled":  true,
                                                "highPriority":  true,
-                                               "remarks":  "Торрент напрямую"
+                                               "remarks":  "Торрент · протокол"
                                            },
                                            {
                                                "network":  "tcp,udp",
@@ -212,14 +212,7 @@
                                                            ],
                                                "enabled":  true,
                                                "highPriority":  true,
-                                               "remarks":  "Radmin и т.п."
-                                           },
-                                           {
-                                               "port":  "443",
-                                               "outboundTag":  "direct",
-                                               "enabled":  false,
-                                               "remarks":  "test",
-                                               "ruleType":  0
+                                               "remarks":  "VPN-клиенты"
                                            },
                                            {
                                                "port":  "",
@@ -229,7 +222,7 @@
                                                               "geosite:category-ads-all"
                                                           ],
                                                "enabled":  true,
-                                               "remarks":  "Блокировка рекламы"
+                                               "remarks":  "Реклама"
                                            },
                                            {
                                                "port":  "",
@@ -239,7 +232,7 @@
                                                           "geoip:private"
                                                       ],
                                                "enabled":  true,
-                                               "remarks":  "Приватные сети напрямую"
+                                               "remarks":  "Приватные IP"
                                            },
                                            {
                                                "port":  "",
@@ -249,7 +242,7 @@
                                                               "geosite:private"
                                                           ],
                                                "enabled":  true,
-                                               "remarks":  "Приватные домены напрямую"
+                                               "remarks":  "Приватные домены"
                                            },
                                            {
                                                "port":  "",
@@ -259,7 +252,7 @@
                                                           "geoip:ru"
                                                       ],
                                                "enabled":  true,
-                                               "remarks":  "Доступные только в России напрямую",
+                                               "remarks":  "RU · IP",
                                                "ruleType":  0
                                            },
                                            {
@@ -269,7 +262,7 @@
                                                               "geosite:category-ru"
                                                           ],
                                                "enabled":  true,
-                                               "remarks":  "Ру в директ",
+                                               "remarks":  "RU · домены",
                                                "ruleType":  0
                                            },
                                            {
@@ -280,7 +273,7 @@
 
                                                             ],
                                                "enabled":  true,
-                                               "remarks":  "Остальное в прокси"
+                                               "remarks":  "Остальное"
                                            }
                                        ]
                          },
@@ -346,7 +339,7 @@
                                                            ],
                                                "enabled":  true,
                                                "highPriority":  true,
-                                               "remarks":  "Торрент(Приложения)"
+                                               "remarks":  "Торрент · приложения"
                                            },
                                            {
                                                "network":  "tcp,udp",
@@ -356,7 +349,7 @@
                                                             ],
                                                "enabled":  true,
                                                "highPriority":  true,
-                                               "remarks":  "Торрент напрямую"
+                                               "remarks":  "Торрент · протокол"
                                            },
                                            {
                                                "network":  "tcp,udp",
@@ -389,7 +382,7 @@
                                                            ],
                                                "enabled":  true,
                                                "highPriority":  true,
-                                               "remarks":  "Radmin и т.п."
+                                               "remarks":  "VPN-клиенты"
                                            },
                                            {
                                                "network":  "tcp,udp",
@@ -398,7 +391,7 @@
                                                               "geosite:faceit"
                                                           ],
                                                "enabled":  true,
-                                               "remarks":  "Faceit(Geosite)"
+                                               "remarks":  "Faceit · geosite"
                                            },
                                            {
                                                "network":  "tcp,udp",
@@ -409,7 +402,7 @@
                                                                "cs2.exe"
                                                            ],
                                                "enabled":  true,
-                                               "remarks":  "Faceit/CS(Приложения)"
+                                               "remarks":  "Faceit · CS"
                                            },
                                            {
                                                "port":  "",
@@ -441,7 +434,7 @@
                                                                "Telegram.exe"
                                                            ],
                                                "enabled":  true,
-                                               "remarks":  "telegram"
+                                               "remarks":  "Telegram"
                                            },
                                            {
                                                "port":  "",
@@ -451,7 +444,7 @@
                                                                "Discord.exe"
                                                            ],
                                                "enabled":  true,
-                                               "remarks":  "Дискорд (войс) в прокси"
+                                               "remarks":  "Discord"
                                            },
                                            {
                                                "port":  "",
@@ -490,7 +483,7 @@
                                                               "geosite:category-ads-all"
                                                           ],
                                                "enabled":  true,
-                                               "remarks":  "Блокировка рекламы"
+                                               "remarks":  "Реклама"
                                            },
                                            {
                                                "outboundTag":  "direct",
@@ -498,7 +491,7 @@
                                                           "geoip:private"
                                                       ],
                                                "enabled":  true,
-                                               "remarks":  "Приватные сети напрямую"
+                                               "remarks":  "Приватные IP"
                                            },
                                            {
                                                "outboundTag":  "direct",
@@ -506,7 +499,7 @@
                                                               "geosite:private"
                                                           ],
                                                "enabled":  true,
-                                               "remarks":  "Приватные домены напрямую"
+                                               "remarks":  "Приватные домены"
                                            },
                                            {
                                                "outboundTag":  "proxy",
@@ -517,7 +510,7 @@
                                                           "8.8.4.4"
                                                       ],
                                                "enabled":  true,
-                                               "remarks":  "DNS в прокси"
+                                               "remarks":  "Внешний DNS"
                                            },
                                            {
                                                "outboundTag":  "proxy",
@@ -525,7 +518,7 @@
                                                           "geoip:ru-blocked"
                                                       ],
                                                "enabled":  true,
-                                               "remarks":  "Заблокированные сети в прокси"
+                                               "remarks":  "Заблокированные IP"
                                            },
                                            {
                                                "outboundTag":  "proxy",
@@ -533,13 +526,13 @@
                                                               "geosite:ru-blocked"
                                                           ],
                                                "enabled":  true,
-                                               "remarks":  "Заблокированные домены в прокси"
+                                               "remarks":  "Заблокированные домены"
                                            },
                                            {
                                                "port":  "0-65535",
                                                "outboundTag":  "direct",
                                                "enabled":  true,
-                                               "remarks":  "Остальное напрямую"
+                                               "remarks":  "Остальное"
                                            }
                                        ]
                          }

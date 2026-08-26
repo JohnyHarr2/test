@@ -1,0 +1,158 @@
+{
+  "dns": {
+    "hosts": {
+      "lkfl2.nalog.ru": "213.24.64.175",
+      "lknpd.nalog.ru": "213.24.64.181",
+      "dns.google": "8.8.8.8",
+      "common.dot.dns.yandex.net": "77.88.8.8"
+    },
+    "servers": [
+      {
+        "address": "https://77.88.8.8/dns-query",
+        "domains": [
+          "geosite:private",
+          "geosite:category-ru",
+          "geosite:whitelist"
+        ],
+        "expectIPs": [
+          "geoip:private",
+          "geoip:direct"
+        ]
+      },
+      "https://8.8.8.8/dns-query",
+      "8.8.8.8",
+      "77.88.8.8",
+      "localhost"
+    ],
+    "queryStrategy": "UseIP"
+  },
+  "log": {
+    "loglevel": "warning"
+  },
+  "routing": {
+    "domainMatcher": "hybrid",
+    "domainStrategy": "IPOnDemand",
+    "rules": [
+      {
+        "type": "field",
+        "domain": [
+          "geosite:category-ads"
+        ],
+        "ruleTag": "block-ads",
+        "remarks": "Реклама",
+        "outboundTag": "block"
+      },
+      {
+        "type": "field",
+        "domain": [
+          "geosite:private"
+        ],
+        "ruleTag": "direct-private-sites",
+        "remarks": "Приватные домены",
+        "outboundTag": "direct"
+      },
+      {
+        "type": "field",
+        "ip": [
+          "geoip:private"
+        ],
+        "ruleTag": "direct-private-ip",
+        "remarks": "Приватные IP",
+        "outboundTag": "direct"
+      },
+      {
+        "type": "field",
+        "domain": [
+          "geosite:category-ru",
+          "geosite:whitelist"
+        ],
+        "ruleTag": "direct-ru-sites",
+        "remarks": "RU · домены",
+        "outboundTag": "direct"
+      },
+      {
+        "type": "field",
+        "ip": [
+          "geoip:direct"
+        ],
+        "ruleTag": "direct-ru-ip",
+        "remarks": "RU · IP",
+        "outboundTag": "direct"
+      },
+      {
+        "type": "field",
+        "ip": [
+          "8.8.8.8",
+          "8.8.4.4"
+        ],
+        "ruleTag": "google-dns-proxy",
+        "remarks": "Внешний DNS",
+        "outboundTag": "proxy"
+      },
+      {
+        "type": "field",
+        "network": "tcp,udp",
+        "ruleTag": "default-proxy",
+        "remarks": "Остальное",
+        "outboundTag": "proxy"
+      }
+    ]
+  },
+  "inbounds": [
+    {
+      "tag": "socks",
+      "port": 10808,
+      "listen": "127.0.0.1",
+      "protocol": "socks",
+      "settings": {
+        "udp": true,
+        "auth": "password",
+        "accounts": [
+          {
+            "user": "user",
+            "pass": "pass"
+          }
+        ]
+      },
+      "sniffing": {
+        "enabled": true,
+        "routeOnly": false,
+        "destOverride": [
+          "http",
+          "tls",
+          "quic",
+          "fakedns"
+        ]
+      }
+    },
+    {
+      "tag": "http",
+      "port": 10809,
+      "listen": "127.0.0.1",
+      "protocol": "http",
+      "settings": {
+        "allowTransparent": false
+      },
+      "sniffing": {
+        "enabled": true,
+        "routeOnly": false,
+        "destOverride": [
+          "http",
+          "tls",
+          "quic",
+          "fakedns"
+        ]
+      }
+    }
+  ],
+  "outbounds": [
+    {
+      "tag": "direct",
+      "protocol": "freedom"
+    },
+    {
+      "tag": "block",
+      "protocol": "blackhole"
+    }
+  ]
+}
