@@ -523,6 +523,107 @@ rule-providers:
     path: ./rule-sets/torrent-clients.yaml
     interval: 86400
     proxy: 🚫 Недоступные сайты
+  torrent-exe:
+    type: inline
+    behavior: classical
+    payload:
+      - PROCESS-NAME,qbittorrent.exe
+      - PROCESS-NAME,utorrent.exe
+      - PROCESS-NAME,utorrentclients.exe
+      - PROCESS-NAME,bittorrent.exe
+      - PROCESS-NAME,utweb.exe
+      - PROCESS-NAME,utorrentie.exe
+      - PROCESS-NAME,bittorrentie.exe
+      - PROCESS-NAME,bitcomet.exe
+      - PROCESS-NAME,tixati.exe
+      - PROCESS-NAME,deluge.exe
+      - PROCESS-NAME,deluge-gui.exe
+      - PROCESS-NAME,deluged.exe
+      - PROCESS-NAME,transmission-qt.exe
+      - PROCESS-NAME,transmission.exe
+      - PROCESS-NAME,azureus.exe
+      - PROCESS-NAME,vuze.exe
+      - PROCESS-NAME,biglybt.exe
+      - PROCESS-NAME,picotorrent.exe
+      - PROCESS-NAME,halite.exe
+      - PROCESS-NAME,tribler.exe
+      - PROCESS-NAME,frostwire.exe
+      - PROCESS-NAME,webtorrent.exe
+      - PROCESS-NAME,bitlord.exe
+      - PROCESS-NAME,limewire.exe
+      - PROCESS-NAME,shareaza.exe
+      - PROCESS-NAME,motrix.exe
+      - PROCESS-NAME,fdm.exe
+      - PROCESS-NAME,ariang.exe
+      - PROCESS-NAME,ktorrent.exe
+      - PROCESS-NAME,eiskaltdcpp.exe
+      - PROCESS-NAME,dcplusplus.exe
+      - PROCESS-NAME,thunder.exe
+      - PROCESS-NAME,downloadsdkserver.exe
+      - PROCESS-NAME,eagleget.exe
+      - PROCESS-NAME,xdm.exe
+      - PROCESS-NAME,rtorrent.exe
+      - PROCESS-NAME,liii.exe
+      - PROCESS-NAME,bitspirit.exe
+      - PROCESS-NAME,bitlet.exe
+      - PROCESS-NAME,flashget.exe
+      - PROCESS-NAME,persepolis.exe
+      - PROCESS-NAME,torrentex.exe
+      - PROCESS-NAME,cpod.exe
+      - PROCESS-NAME,zona.exe
+      - PROCESS-NAME,mediaget.exe
+      - PROCESS-NAME,popcorntime.exe
+      - PROCESS-NAME,butter-project.exe
+      - PROCESS-NAME,free-download-manager.exe
+      - PROCESS-NAME,jdownloader2.exe
+      - PROCESS-NAME,mlnet.exe
+      - PROCESS-NAME,synapse.exe
+      - PROCESS-NAME,aria2c.exe
+      - PROCESS-NAME,qbittorrent-nox.exe
+      - PROCESS-NAME,qbittorrent_nox.exe
+      - PROCESS-NAME,qbittorrentportable.exe
+      - PROCESS-NAME,utorrentportable.exe
+      - PROCESS-NAME,deluge-console.exe
+      - PROCESS-NAME,deluge-web.exe
+      - PROCESS-NAME,transmission-gtk.exe
+      - PROCESS-NAME,transmission-daemon.exe
+      - PROCESS-NAME,transmission-cli.exe
+      - PROCESS-NAME,tixati_portable.exe
+      - PROCESS-NAME,bitcomet_x64.exe
+      - PROCESS-NAME,shareaza64.exe
+      - PROCESS-NAME,mediaget_crashpad_handler.exe
+      - PROCESS-NAME,popcorn-time.exe
+      - PROCESS-NAME,butter.exe
+      - PROCESS-NAME,ace_engine.exe
+      - PROCESS-NAME,acestreamengine.exe
+      - PROCESS-NAME,acestream.exe
+      - PROCESS-NAME,torrserver.exe
+      - PROCESS-NAME,torrserver-windows-amd64.exe
+      - PROCESS-NAME,torrserver-windows-386.exe
+      - PROCESS-NAME,torrserve.exe
+      - PROCESS-NAME,rslsync.exe
+      - PROCESS-NAME,resilio sync.exe
+      - PROCESS-NAME,bittorrentsync.exe
+      - PROCESS-NAME,btsync.exe
+      - PROCESS-NAME,thunderplatform.exe
+      - PROCESS-NAME,xlliveud.exe
+      - PROCESS-NAME,nettransport.exe
+      - PROCESS-NAME,jdownloader.exe
+      - PROCESS-NAME,xdman.exe
+      - PROCESS-NAME,abc.exe
+      - PROCESS-NAME,burst.exe
+      - PROCESS-NAME,btdownloadgui.exe
+      - PROCESS-NAME,mlgui.exe
+      - PROCESS-NAME,lphant.exe
+      - PROCESS-NAME,ares.exe
+      - PROCESS-NAME,emule.exe
+      - PROCESS-NAME,amule.exe
+      - PROCESS-NAME,apexdc.exe
+      - PROCESS-NAME,strongdc.exe
+      - PROCESS-NAME,folx.exe
+      - PROCESS-NAME,webtorrent helper.exe
+      - PROCESS-NAME,webtorrent helper (gpu).exe
+      - PROCESS-NAME,webtorrent helper (renderer).exe
   ru-apps:
     type: http
     behavior: classical
@@ -578,7 +679,9 @@ rules:
   # Отправляем торренты в DIRECT (опционально)
   - RULE-SET,torrent-clients,DIRECT
   - RULE-SET,torrent-trackers,DIRECT
+  - RULE-SET,torrent-exe,DIRECT
   - PROCESS-NAME-REGEX,(?i).*torrent.*,DIRECT
+  - PROCESS-NAME-REGEX,(?i)^(utweb|bitcomet|tixati|deluge|deluge-gui|deluged|transmission-qt|transmission|azureus|vuze|biglybt|halite|tribler|frostwire|bitlord|limewire|shareaza|motrix|fdm|ariang|eiskaltdcpp|dcplusplus|thunder|downloadsdkserver|eagleget|xdm|liii|bitspirit|bitlet|flashget|persepolis|cpod|zona|mediaget|popcorntime|butter-project|free-download-manager|jdownloader2|mlnet|synapse|aria2c|deluge-console|deluge-web|transmission-gtk|transmission-daemon|transmission-cli|tixati_portable|bitcomet_x64|shareaza64|mediaget_crashpad_handler|popcorn-time|butter|ace_engine|acestreamengine|acestream|torrserver|torrserver-windows-amd64|torrserver-windows-386|torrserve|rslsync|resilio\s+sync|btsync|thunderplatform|xlliveud|nettransport|jdownloader|xdman|abc|burst|btdownloadgui|mlgui|lphant|ares|emule|amule|apexdc|strongdc|folx)(\.exe)?$,DIRECT
 
   # Делаем REJECT QUIC (для VLESS REALITY)
   - RULE-SET,quic,REJECT
