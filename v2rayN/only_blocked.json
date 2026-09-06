@@ -152,7 +152,8 @@
     "outboundTag": "proxy",
     "process": [
       "ChatGPT.exe",
-      "Cursor.exe"
+      "Cursor.exe",
+      "Grok Bot.exe"
     ],
     "enabled": true,
     "remarks": "Cursor/Codex",
