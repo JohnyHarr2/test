@@ -149,6 +149,18 @@
     "remarks": "VPN-клиенты"
   },
   {
+    "outboundTag": "proxy",
+    "process": [
+      "ChatGPT.exe",
+      "Cursor.exe"
+    ],
+    "enabled": true,
+    "remarks": "Cursor/Codex",
+    "ruleType": 1,
+    "isCustom": true,
+    "highPriority": false
+  },
+  {
     "network": "tcp,udp",
     "outboundTag": "direct",
     "domain": [
