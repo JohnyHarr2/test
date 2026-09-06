@@ -164,6 +164,15 @@
   },
   {
     "network": "tcp,udp",
+    "outboundTag": "proxy",
+    "domain": [
+      "geosite:gitlab"
+    ],
+    "enabled": true,
+    "remarks": "GitLab"
+  },
+  {
+    "network": "tcp,udp",
     "outboundTag": "direct",
     "domain": [
       "geosite:faceit"
