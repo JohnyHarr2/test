@@ -525,7 +525,8 @@
           "process": [
             "ChatGPT.exe",
             "Cursor.exe",
-            "Grok Bot.exe"
+            "Grok Bot.exe",
+            "codex.exe"
           ],
           "enabled": true,
           "remarks": "Cursor/Codex",
