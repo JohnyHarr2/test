@@ -358,6 +358,14 @@
           "ruleType": 0
         },
         {
+          "outboundTag": "direct",
+          "domain": [
+            "wardxp-mim.vivox.com"
+          ],
+          "enabled": true,
+          "remarks": "WardogsVoice"
+        },
+        {
           "port": "0-65535",
           "network": "tcp,udp",
           "outboundTag": "proxy",

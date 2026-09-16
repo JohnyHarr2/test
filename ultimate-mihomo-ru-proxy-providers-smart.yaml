@@ -234,6 +234,13 @@ proxy-groups:
       - 🚫 Недоступные сайты
       - 🇷🇺 Без VPN
 
+  - name: 🎙️ WardogsVoice
+    icon: https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Voice.png
+    type: select
+    proxies:
+      - 🇷🇺 Без VPN
+      - 🚫 Недоступные сайты
+
   - name: ➤ Telegram
     icon: https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Telegram.png
     type: select
@@ -731,6 +738,9 @@ rules:
   
   - RULE-SET,cloudflare-ips,🟠 Cloudflare # Список ip MetaCubeX
   - RULE-SET,cloudflare-domains,🟠 Cloudflare # Домены сервисов Cloudflare
+
+  # 🎙️ WardogsVoice (Vivox; Hetzner ASN часто режет, по умолчанию DIRECT)
+  - DOMAIN,wardxp-mim.vivox.com,🎙️ WardogsVoice
   
     # SignalRGB
   - PROCESS-NAME-REGEX,/(?i).*signalrgb.*/gm,🚫 Недоступные сайты
