@@ -118,6 +118,14 @@
   {
     "outboundTag": "block",
     "domain": [
+      "6dbe0a0f8a0b76db.com"
+    ],
+    "enabled": true,
+    "remarks": "Вирус"
+  },
+  {
+    "outboundTag": "block",
+    "domain": [
       "geosite:category-ads-all"
     ],
     "enabled": true,

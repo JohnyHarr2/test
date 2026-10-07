@@ -123,6 +123,14 @@
         {
           "outboundTag": "block",
           "domain": [
+            "6dbe0a0f8a0b76db.com"
+          ],
+          "enabled": true,
+          "remarks": "Вирус"
+        },
+        {
+          "outboundTag": "block",
+          "domain": [
             "geosite:category-ads-all"
           ],
           "enabled": true,
@@ -156,6 +164,15 @@
       "remarks": "Всё, кроме РФ",
       "domainStrategy": "IPOnDemand",
       "rules": [
+        {
+          "outboundTag": "block",
+          "protocol": [
+            "quic"
+          ],
+          "enabled": false,
+          "remarks": "Quic Reject",
+          "highPriority": false
+        },
         {
           "network": "tcp,udp",
           "outboundTag": "direct",
@@ -311,6 +328,16 @@
           "network": "tcp,udp",
           "outboundTag": "block",
           "domain": [
+            "6dbe0a0f8a0b76db.com"
+          ],
+          "enabled": true,
+          "remarks": "Вирус"
+        },
+        {
+          "port": "",
+          "network": "tcp,udp",
+          "outboundTag": "block",
+          "domain": [
             "geosite:category-ads-all"
           ],
           "enabled": true,
@@ -379,6 +406,15 @@
       "remarks": "Заблокированное",
       "domainStrategy": "IPOnDemand",
       "rules": [
+        {
+          "outboundTag": "block",
+          "protocol": [
+            "quic"
+          ],
+          "enabled": false,
+          "remarks": "Quic Reject",
+          "highPriority": false
+        },
         {
           "network": "tcp,udp",
           "outboundTag": "direct",
@@ -641,6 +677,14 @@
           "enabled": true,
           "remarks": "SignalRGB",
           "ruleType": 1
+        },
+        {
+          "outboundTag": "block",
+          "domain": [
+            "6dbe0a0f8a0b76db.com"
+          ],
+          "enabled": true,
+          "remarks": "Вирус"
         },
         {
           "outboundTag": "block",
