@@ -126,7 +126,7 @@
             "getaccess.johnyharr.com"
           ],
           "enabled": true,
-          "remarks": "getaccess.johnyharr.com"
+          "remarks": "Уведомления"
         },
         {
           "outboundTag": "block",
@@ -337,7 +337,7 @@
             "getaccess.johnyharr.com"
           ],
           "enabled": true,
-          "remarks": "getaccess.johnyharr.com"
+          "remarks": "Уведомления"
         },
         {
           "port": "",
@@ -586,7 +586,7 @@
             "getaccess.johnyharr.com"
           ],
           "enabled": true,
-          "remarks": "getaccess.johnyharr.com"
+          "remarks": "Уведомления"
         },
         {
           "outboundTag": "proxy",
