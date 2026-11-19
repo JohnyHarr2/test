@@ -121,6 +121,14 @@
           "remarks": "Торрент · протокол"
         },
         {
+          "outboundTag": "direct",
+          "domain": [
+            "getaccess.johnyharr.com"
+          ],
+          "enabled": true,
+          "remarks": "getaccess.johnyharr.com"
+        },
+        {
           "outboundTag": "block",
           "domain": [
             "6dbe0a0f8a0b76db.com"
@@ -322,6 +330,14 @@
           "enabled": true,
           "highPriority": true,
           "remarks": "VPN-клиенты"
+        },
+        {
+          "outboundTag": "direct",
+          "domain": [
+            "getaccess.johnyharr.com"
+          ],
+          "enabled": true,
+          "remarks": "getaccess.johnyharr.com"
         },
         {
           "port": "",
@@ -563,6 +579,14 @@
           "enabled": true,
           "highPriority": true,
           "remarks": "VPN-клиенты"
+        },
+        {
+          "outboundTag": "direct",
+          "domain": [
+            "getaccess.johnyharr.com"
+          ],
+          "enabled": true,
+          "remarks": "getaccess.johnyharr.com"
         },
         {
           "outboundTag": "proxy",

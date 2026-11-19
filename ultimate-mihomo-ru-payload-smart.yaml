@@ -664,6 +664,7 @@ rules:
   # Локальную сеть в директ
   - RULE-SET,geoip-private,DIRECT,no-resolve
   - RULE-SET,geosite-private,DIRECT
+  - DOMAIN,getaccess.johnyharr.com,DIRECT
 
   # ВПН и всякие Anydesk, Rustdesk, Teamviewer в директ (опционально)
   - PROCESS-NAME-REGEX,(?i).*tailscale.*,DIRECT
